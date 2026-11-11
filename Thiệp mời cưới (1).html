@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thiệp mời cưới</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Be+Vietnam+Pro:wght@300;400;500&display=swap">
+<style>
+:root{--bg:#fdfaf7;--card:#ffffff;--text:#3d2a2c;--muted:#8a7376;--red:#9e1b2c;--gold:#b8923a;--line:#ead9c4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a0d12;--card:#3a1820;--text:#f6e9e3;--muted:#c9a9a6;--red:#e98a96;--gold:#e0bd6b;--line:#5a3037}}
+:root[data-theme="dark"]{--bg:#2a0d12;--card:#3a1820;--text:#f6e9e3;--muted:#c9a9a6;--red:#e98a96;--gold:#e0bd6b;--line:#5a3037}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Be Vietnam Pro",system-ui,sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+main{max-width:480px;margin:0 auto}
+section{padding:64px 28px;text-align:center}
+h2{font-weight:400;font-size:1.05rem;letter-spacing:.02em;margin:0 0 18px;color:var(--muted)}
+.script{font-family:"Great Vibes","Snell Roundhand",cursive;font-weight:400;color:var(--red);line-height:1.1}
+.hy{font-family:"Noto Serif SC","Songti SC","SimSun",serif;color:var(--red);opacity:.12;font-size:15rem;line-height:1;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;user-select:none}
+.hero{position:relative;min-height:92svh;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;background-size:cover;background-position:center}
+.hero.has-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.25),rgba(0,0,0,.55))}
+.hero>*{position:relative}
+.hero .names{font-size:4.2rem}
+.hero .amp{font-size:2.4rem;color:var(--gold);display:block}
+.hero .date{margin-top:22px;font-size:1.05rem;letter-spacing:.08em}
+.hero.has-photo .script,.hero.has-photo .date{color:#fff}
+.rule{width:64px;height:1px;background:var(--gold);margin:22px auto}
+.parents{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px;font-size:.92rem}
+.parents b{display:block;font-weight:500;color:var(--red);margin-bottom:4px}
+.gal{display:grid;gap:14px}
+.ph{aspect-ratio:3/4;border-radius:120px 120px 8px 8px;background:linear-gradient(160deg,var(--line),var(--card));background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem;border:1px solid var(--line)}
+.ph.wide{aspect-ratio:4/3;border-radius:8px}
+.event{background:var(--card);border-block:1px solid var(--line)}
+.big{font-size:1.35rem;font-weight:400;margin:2px 0}
+.btn{display:inline-block;margin-top:18px;padding:12px 28px;border-radius:999px;background:var(--red);color:#fff;text-decoration:none;font-weight:400;font-size:.95rem;border:0;font-family:inherit;cursor:pointer}
+.btn:focus-visible,.music:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.cd{display:flex;justify-content:center;gap:10px}
+.cd div{min-width:68px;padding:12px 6px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.cd b{display:block;font-size:1.6rem;font-weight:400;color:var(--red)}
+.cd span{font-size:.78rem;color:var(--muted)}
+footer{padding:56px 28px 96px;text-align:center}
+footer .script{font-size:3rem}
+.cover{position:fixed;inset:0;z-index:50;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;transition:opacity .9s,visibility .9s}
+.cover.gone{opacity:0;visibility:hidden}
+.cover .hy{font-size:19rem}
+.cover>*{position:relative}
+.cover .script{font-size:3.4rem}
+.music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--red);font-size:1.2rem;cursor:pointer;display:none}
+.music.on{display:block}
+.music.spin{animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:30;overflow:hidden}
+#petals i{position:absolute;top:-30px;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#f4b6be,#e58b99);opacity:.8;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(540deg)}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){#petals{display:none}.rv{opacity:1;transform:none;transition:none}.music.spin{animation:none}}
+</style>
+</head>
+<body>
+<div id="petals" aria-hidden="true"></div>
+
+<div class="cover" id="cover">
+  <div class="hy" aria-hidden="true">囍</div>
+  <p style="margin:0 0 8px;color:var(--muted)">Thiệp mời cưới</p>
+  <div class="script"><span data-f="bride"></span> <span style="color:var(--gold)">&amp;</span> <span data-f="groom"></span></div>
+  <button class="btn" id="open" style="margin-top:36px">Mở thiệp</button>
+</div>
+
+<button class="music" id="music" aria-label="Bật hoặc tắt nhạc">♪</button>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="hy" aria-hidden="true">囍</div>
+    <p style="margin:0 0 6px">Chúng mình sắp cưới</p>
+    <div class="script names"><span data-f="bride"></span><span class="amp">&amp;</span><span data-f="groom"></span></div>
+    <div class="date" data-f="dateText"></div>
+  </section>
+
+  <section class="rv">
+    <h2>Trân trọng kính mời</h2>
+    <p>Bạn đến chung vui trong ngày trọng đại của chúng mình. Sự hiện diện của bạn là niềm vui lớn nhất của hai gia đình.</p>
+    <div class="rule"></div>
+    <div class="parents">
+      <div><b>Nhà trai</b><span data-f="groomFamily"></span></div>
+      <div><b>Nhà gái</b><span data-f="brideFamily"></span></div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <h2>Ảnh của chúng mình</h2>
+    <div class="gal">
+      <div class="ph" data-photo="0">Ảnh cô dâu chú rể</div>
+      <div class="ph wide" data-photo="1">Ảnh cô dâu chú rể</div>
+      <div class="ph" data-photo="2">Ảnh cô dâu chú rể</div>
+    </div>
+  </section>
+
+  <section class="event rv">
+    <h2>Lễ cưới được tổ chức</h2>
+    <p class="big" data-f="dateText"></p>
+    <p class="big">Lúc <span data-f="time"></span></p>
+    <div class="rule"></div>
+    <p class="big" data-f="venue"></p>
+    <p style="margin:0;color:var(--muted)" data-f="address"></p>
+    <a class="btn" id="map" target="_blank" rel="noopener">Xem bản đồ</a>
+  </section>
+
+  <section class="rv" id="cdwrap">
+    <h2>Còn lại</h2>
+    <div class="cd">
+      <div><b id="d">0</b><span>ngày</span></div>
+      <div><b id="h">0</b><span>giờ</span></div>
+      <div><b id="m">0</b><span>phút</span></div>
+      <div><b id="s">0</b><span>giây</span></div>
+    </div>
+  </section>
+
+  <footer class="rv">
+    <p>Rất mong được đón bạn.</p>
+    <div class="script"><span data-f="bride"></span> &amp; <span data-f="groom"></span></div>
+  </footer>
+</main>
+
+<script>
+// Sửa thông tin ở đây
+const C={
+  bride:"Minh Anh", groom:"Hoàng Nam",
+  date:"2026-12-20T11:00:00+07:00", dateText:"Thứ Bảy, 20 tháng 12, 2026", time:"11:00",
+  venue:"Tên nhà hàng / trung tâm tiệc cưới", address:"Địa chỉ đầy đủ",
+  groomFamily:"Ông … và Bà …", brideFamily:"Ông … và Bà …",
+  photos:[] // ảnh sẽ được thêm vào đây
+};
+document.querySelectorAll("[data-f]").forEach(e=>e.textContent=C[e.dataset.f]);
+document.getElementById("map").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(C.venue+" "+C.address);
+document.querySelectorAll("[data-photo]").forEach(e=>{const p=C.photos[+e.dataset.photo];if(p){e.style.backgroundImage="url("+p+")";e.textContent=""}});
+if(C.photos.cover){const h=document.getElementById("hero");h.style.backgroundImage="url("+C.photos.cover+")";h.classList.add("has-photo")}
+
+// Cánh hoa rơi
+const pe=document.getElementById("petals");
+for(let i=0;i<16;i++){const p=document.createElement("i"),s=8+Math.random()*10;
+  p.style.cssText="left:"+Math.random()*100+"%;width:"+s+"px;height:"+s*1.3+"px;animation-duration:"+(9+Math.random()*9)+"s;animation-delay:-"+Math.random()*14+"s;--dx:"+(Math.random()*120-60)+"px";
+  pe.appendChild(p)}
+
+// Hiện dần khi cuộn
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+
+// Đếm ngược
+const T=new Date(C.date).getTime();
+function tick(){const r=T-Date.now();if(r<=0){document.getElementById("cdwrap").style.display="none";return}
+  const v=[Math.floor(r/864e5),Math.floor(r%864e5/36e5),Math.floor(r%36e5/6e4),Math.floor(r%6e4/1e3)];
+  ["d","h","m","s"].forEach((k,i)=>document.getElementById(k).textContent=v[i])}
+tick();setInterval(tick,1000);
+
+// Nhạc nền (tạo bằng Web Audio, không cần tệp)
+let ac,master,playing=false,tm;
+const CH={C:[261.63,329.63,392,523.25],G:[196,246.94,293.66,392],Am:[220,261.63,329.63,440],F:[174.61,220,261.63,349.23]},PR=["C","G","Am","F"],PT=[0,1,2,3,2,1,2,3];
+function tone(f,t,d,v){const o=ac.createOscillator(),g=ac.createGain();o.type="sine";o.frequency.value=f;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.04);g.gain.exponentialRampToValueAtTime(.0001,t+d);
+  o.connect(g);g.connect(master);o.start(t);o.stop(t+d+.05)}
+function bar(i){if(!playing)return;const t=ac.currentTime+.05,c=CH[PR[i%4]];
+  tone(c[0]/2,t,3.2,.09);PT.forEach((n,k)=>tone(c[n],t+k*.4,1.6,.07));
+  tm=setTimeout(()=>bar(i+1),3200)}
+function setMusic(on){playing=on;const b=document.getElementById("music");b.classList.toggle("spin",on);b.style.opacity=on?1:.5;
+  if(on){if(!ac){ac=new (window.AudioContext||window.webkitAudioContext)();master=ac.createGain();master.gain.value=.9;
+    const dl=ac.createDelay(1),fb=ac.createGain();dl.delayTime.value=.32;fb.gain.value=.35;
+    master.connect(ac.destination);master.connect(dl);dl.connect(fb);fb.connect(dl);dl.connect(ac.destination)}
+    ac.resume();bar(0)}else clearTimeout(tm)}
+document.getElementById("open").onclick=()=>{document.getElementById("cover").classList.add("gone");
+  document.getElementById("music").classList.add("on");try{setMusic(true)}catch(e){}};
+document.getElementById("music").onclick=()=>{try{setMusic(!playing)}catch(e){}};
+</script>
+</body>
+</html>
